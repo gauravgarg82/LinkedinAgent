@@ -1,0 +1,36 @@
+{
+  "insight": [
+    "How AI is actually being used in government services right now vs. the hype — triage, document review, citizen-facing chat, NOT final decisions",
+    "The gap between what AI vendors pitch to government agencies and what agencies can realistically procure and deploy",
+    "Digital permitting adoption trends: what 'modern' actually means for a permitting office in 2026",
+    "Why government software procurement cycles shape (and slow) technology adoption, and what vendors get wrong about it",
+    "The real bottleneck in government digital transformation is rarely the technology",
+    "What it means to build software for an audience that can't just 'switch products' if they don't like it (captive public-sector users)",
+    "Where AI creates real efficiency in permitting/complaint workflows without introducing accountability risk",
+    "The difference between a government agency that's digitized and one that's actually modernized",
+    "Data standards and interoperability problems that quietly slow down every gov-tech project",
+    "What the next 2-3 years of AI-in-government adoption will realistically look like, based on what's happening today"
+  ],
+  "leadership": [
+    "What legacy government system modernization actually requires beyond just rewriting the code (institutional knowledge, staff change management)",
+    "Lessons from data migration projects: why mock runs and dry cutovers matter more than the migration script itself",
+    "What makes a complaint/case management system succeed or fail in a government context (workflow design, audit trails, public accountability)",
+    "Engineering leadership instincts that work in gov-tech but would be wrong in consumer SaaS (risk tolerance, compliance, multi-year system lifespans)",
+    "How to scope a government software project when requirements will change over an 18-month procurement and delivery cycle",
+    "What I look for when hiring engineers who want to build public-sector software",
+    "The unglamorous engineering work that actually determines whether a government system migration succeeds",
+    "How technical debt accumulates differently in systems that have to run for 15-20 years vs. typical software lifespans",
+    "Vendor-agency relationship dynamics that determine whether a gov-tech project actually ships",
+    "What a CTO's job looks like day-to-day in a company that sells to government agencies vs. one that sells to enterprises"
+  ],
+  "case_study": [
+    "A generalized pattern from a data migration engagement: what almost went wrong and what caught it in time",
+    "A generalized story about a complaint management system rollout and the workflow assumption that had to change",
+    "My honest take on where AI tools have earned a place in our own engineering process, and where they haven't",
+    "A lesson from watching a government client's staff adapt (or resist) a new system, generalized",
+    "What surprised me most about building software for permitting offices when I first started in this space",
+    "A generalized pattern from an Excel-to-system migration: what agencies still run on spreadsheets and why that's not always wrong",
+    "My take on the 'move fast' mentality applied to systems that handle permits, complaints, or citizen data",
+    "A moment where I had to push back on a client (or my own team) about scope, generalized into a lesson"
+  ]
+}
