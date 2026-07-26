@@ -1,0 +1,46 @@
+name: LinkedIn Draft Generator
+
+on:
+  schedule:
+    # 01:30 UTC = 7:00 AM IST. Runs Mon / Wed / Fri.
+    - cron: '30 1 * * 1,3,5'
+  workflow_dispatch:
+    inputs:
+      content_type:
+        description: 'Override content type (insight / leadership / case_study)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+jobs:
+  generate-and-send:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Generate and send draft
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
+        run: python generate_draft.py ${{ github.event.inputs.content_type }}
+
+      - name: Commit updated rotation state
+        run: |
+          git config user.name "linkedin-draft-bot"
+          git config user.email "actions@github.com"
+          git add state/rotation_state.json
+          git diff --staged --quiet || git commit -m "Update topic rotation state [skip ci]"
+          git push
